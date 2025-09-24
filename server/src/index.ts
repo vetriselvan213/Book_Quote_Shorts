@@ -11,9 +11,15 @@ import morgan from "morgan";
 import { AppDataSource } from "./data-source";
 import quotesRoutes from "./routes/quotesRoutes";
 
+const allowedOrigins = [
+  'https://vetri-book-quote-shorts.netlify.app'
+];
+
 const app = express();
 
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || "*" }));
+app.use(cors({
+  origin: allowedOrigins,
+}));
 app.use(express.json());
 app.use(morgan("tiny"));
 
@@ -32,4 +38,5 @@ const port = process.env.PORT || 4000;
     console.error("Startup error:", err);
     process.exit(1);
   }
+
 })();
