@@ -9,7 +9,7 @@ A full-stack web app to share and like short quotes from books. Built with React
 - **Frontend**: React + Vite + TypeScript
 - **Backend**: Node.js + Express + TypeORM
 - **Database**: PostgreSQL
-- **Deployment**: Vercel (frontend), Render (backend + DB)
+- **Deployment**: Netlify (frontend), Render (backend + DB)
 
 ---
 
@@ -30,3 +30,4 @@ A full-stack web app to share and like short quotes from books. Built with React
 ```bash
 git clone https://github.com/your-username/book-quote-shorts.git
 cd book-quote-shorts
+
