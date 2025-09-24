@@ -1,0 +1,24 @@
+{
+  "name": "book-quote-shorts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:client": "npm --workspace client run dev",
+    "build:client": "npm --workspace client run build",
+    "preview:client": "npm --workspace client run preview",
+    "dev:server": "node --env-file=.env server/index.js",
+    "start:server": "node server/index.js",
+    "db:schema": "psql -h $PGHOST -U $PGUSER -d $PGDATABASE -f db/schema.sql",
+    "db:seed": "psql -h $PGHOST -U $PGUSER -d $PGDATABASE -f db/seed.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "private": "true"
+}
